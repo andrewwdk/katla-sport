@@ -8,16 +8,14 @@
         <th scope="col">#</th>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">{{hive_section.id}}</th>
-            <th scope="row">{{hive_section.code}}</th>
-            <th scope="row">{{hive_section.name}}</th>
+        <tr *ngFor="let hiveSection of hiveSections">
+            <th scope="row">{{hiveSection.id}}</th>
+            <th scope="row">{{hiveSection.code}}</th>
+            <th scope="row">{{hiveSection.name}}</th>
           <td>
-            <span class="btn-toolbar" role="toolbar" aria-label="Hive action buttons" style="display: block; white-space:nowrap;">
               <div class="btn-group" role="group" aria-label="Edit group">
-                <button routerLink="/section/hive_section_id" type="button" class="btn btn-primary">Edit</button>
+                <button routerLink="/section/{{hiveSection.id}}" type="button" class="btn btn-primary">Edit</button>
               </div>
-            </span>
           </td>
         </tr>
     </tbody>
